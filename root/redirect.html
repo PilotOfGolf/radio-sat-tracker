@@ -8,11 +8,16 @@
     
     function getPos() {
       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(continue);
         location.href = 'https://pilotofgolf.github.io/radio-sat-tracker/root/index.html';
 
       } else { 
         element.innerHTML = "Position not supported";
+      }
+
+      function continue() {
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
       }
     }      
   </script>
