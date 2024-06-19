@@ -1,0 +1,14 @@
+<html>
+  <script>
+    var cords;
+    function findCords() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    cords = findCords();
+    console.log(cords);
+  </script>
+</html>
