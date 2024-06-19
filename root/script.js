@@ -1,9 +1,10 @@
+
+
 function getPos() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPos);
+        navigator.geolocation.getCurrentPosition(showPos, errorDiag); 
       } else { 
-        x.innerHTML = "Geolocation is not supported.";
-
+        alert("Geolocation is not supported, most likely by your device.");
       }
       
     }
@@ -23,5 +24,29 @@ function showPos(position) {
     console.log("Long: " + long);
    }
 
+function errorDiag(error) {
+  switch(error.code) {
+    case error.TIMEOUT:
+      console.log("The request timed out. Error Code 1");
+      alert("The request timed out. Error Code 1");
+      break;
+
+    case error.UNKNOWN_ERROR:
+      console.log("Unknown error. Error Code 2");
+      alert("Unknown error. Error Code 2");
+      break;
+
+    case error.PERMISSION_DENIED:
+      console.log("You or your device denied access Geo-location. Try Again. Error Code 3");
+      alert("You or your device denied access Geo-location. Try Again. Error Code 3");
+      break;
+      
+    case error.POSITION_UNAVAILABLE:
+      console.log("Location information is unavailable. Error Code 4");
+      alert("Location information is unavailable. Error Code 4");
+      break;
+    
+    }
+  } 
 
 
