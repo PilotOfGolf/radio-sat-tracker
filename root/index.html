@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  
-</head>
-<body>
-<h1 id="site_name">Radio-Sat-Tracker</h1>
-<h2 id="page_name">Home</h2>
+    <head>
+        <script src="script.js" type="text/javascript"></script>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    </head>
+    <body>
+        <h1>To determine what satellites are above you, please press the button below and allow location services. </h1>
+        <button onclick="getPos()">Allow Location Services</button>
+   
+        <h1>To continue, please press the button below.</h1>
+        <form action="../root/home.html">
+            <input type="submit" value="Contine to Radio-Sat-Tracker" />
+        </form> 
 
-<p id="text_page_content">Hello. This is a webpage in order to help people find satellites for amateur radio, also known as ham radio. You can use this site to help with contesting, or use it just for fun.</p>
-  
-  
-</body>
+        <hr />
+
+        <h2>If you are having issues, it may be becuase your device has no GPS. Currently these devices are not supported, however they may eventually become supported. </h2>
+        <h2>However, altitude support for devices without an altimeter is going to be the priority, in terms of time, or potentially even API costs.  </h2>
+        <h2>If your device does not have a GPS, currently please do not try to access the main site, as I do not want to be making wasteful API calls. </h2>
+        
+        <p>¯\_(ツ)_/¯</p>
+    </body>
 </html>
