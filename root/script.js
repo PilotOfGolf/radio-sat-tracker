@@ -1,17 +1,17 @@
-
+var userLocInput = false;
+var lat; 
+var long;
 
 function getPos() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPos, errorDiag); 
       } else { 
         alert("Geolocation is not supported, most likely by your device.");
+        userLocInput = true;
       }
       
     }
 
-
-// For now only devices with built-in browser support for geo-cordinates is supported. 
-// Hope to add at some point, using an API to conver Address / Zipcode to geo-cordinates. 
 // Altitude support takes priority using https://www.opentopodata.org/
 
 var lat; 
