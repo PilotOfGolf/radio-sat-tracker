@@ -1,6 +1,10 @@
-var userLocInput = false;
+
+
+
+var userLocInput = false; // This is an eventual feature where the user can add the location data themselves. 
 var lat; 
 var long;
+var alt;
 
 function getPos() {
     if (navigator.geolocation) {
